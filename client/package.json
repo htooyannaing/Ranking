@@ -1,0 +1,36 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": {
+    "/auth/google": {
+      "target": "http://localhost:5005"
+    },
+    "/auth/facebook": {
+      "target": "http://localhost:5005"
+    },
+    "/api/*": {
+      "target": "http://localhost:5005"
+    }
+  },
+  "dependencies": {
+    "antd": "^3.2.1",
+    "axios": "^0.17.1",
+    "lodash": "^4.17.10",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-intl": "^2.4.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "^1.1.4",
+    "react-spinners": "^0.3.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "set PORT=3005 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
